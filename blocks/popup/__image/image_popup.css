@@ -1,0 +1,9 @@
+#imagePopup .popup__content {
+    background: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    max-width: 80vw;
+    max-height: 80vw;
+}
