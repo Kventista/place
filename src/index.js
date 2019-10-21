@@ -2,6 +2,7 @@ import { Api } from './api.js';
 import { Card } from './Card.js';
 import { CardList } from './CardList.js';
 import { Popup } from './Popup.js';
+import './pages/index.css';
 
 export const api = new Api({
     baseUrl: 'http://95.216.175.5/cohort3',
