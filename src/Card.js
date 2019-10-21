@@ -1,4 +1,4 @@
-class Card {
+export class Card {
     constructor(name, link) {
         this.cardElement = this.createCard(name, link);
         this.like = this.like.bind(this);

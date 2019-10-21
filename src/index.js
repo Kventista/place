@@ -1,4 +1,9 @@
-const api = new Api({
+import { Api } from './api.js';
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { Popup } from './Popup.js';
+
+export const api = new Api({
     baseUrl: 'http://95.216.175.5/cohort3',
     headers: {
         authorization: '9caabadd-d926-41cb-867b-ab4c313de264',
@@ -24,15 +29,12 @@ const form = document.querySelector('#edit');
 const submit = document.querySelector('#submit');
 const newCardForm = document.forms.new;
 const newEditForm = document.forms.edit;
-
 const addPopup = new Popup(cardPopupAdd, addButton);
 const editPopup = new Popup(cardPopupEdit, editButton);
 const imagePopup = new Popup(cardPopupImage);
-
 const nameUser = document.querySelector('.user-info__name');
 const aboutUser = document.querySelector('.user-info__job');
 const avatarUser = document.querySelector('.user-info__photo');
-
 const card_list = new CardList(placesSection);
 //Слушатели событий
 username.addEventListener('input', handleValidate);

@@ -1,0 +1,32 @@
+{
+    "name": "place",
+    "version": "1.0.0",
+    "description": "Проектная работа №11 от Яндекс Практикума. Проект по темам Git и webpack",
+    "scripts": {
+        "build": "webpack --mode production --display-error-details",
+        "dev": "webpack-dev-server --mode development --open --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kventista/place.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kventista/place/issues"
+    },
+    "homepage": "https://github.com/Kventista/place#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "babel-loader": "^8.0.6",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2"
+    },
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "core-js": "^3.1.4"
+    }
+}
