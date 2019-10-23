@@ -4,14 +4,14 @@ import { CardList } from './CardList.js';
 import { Popup } from './Popup.js';
 import './pages/index.css';
 
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort3' : 'https://praktikum.tk/cohort3';
 export const api = new Api({
-    baseUrl: 'http://95.216.175.5/cohort3',
+    baseUrl: serverUrl,
     headers: {
         authorization: '9caabadd-d926-41cb-867b-ab4c313de264',
         'Content-Type': 'application/json'
     }
 });
-
 const placesSection = document.querySelector('.places-list');
 const popupsSection = document.querySelector('.popups');
 const addButton = document.querySelector('.user-info__button');
@@ -44,7 +44,7 @@ submit.addEventListener('click', sendForm);
 name.addEventListener('input', completeRow);
 link.addEventListener('input', completeRow);
 
-//Проверяем наличие текста в форму добавления карточки
+//Проверяем наличие текста в форму добавления карточки.
 function completeRow() {
     if (name.value !== '' && link.value !== '') {
         document.querySelector('#addForm .popup__button').disabled = false;
@@ -99,7 +99,7 @@ function sendForm(event) {
         editProfile(newEditForm.username.value, newEditForm.job.value);
         cardPopupEdit.classList.remove('popup_is-opened');
     } else {
-        console.log('form is still not validated =( ');
+        console.log('form is still not validated');
     }
 };
 
